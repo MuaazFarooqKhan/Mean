@@ -1,0 +1,69 @@
+.home {
+    /* Remove centering and make it behave like a paragraph */
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem; /* Adjust size if needed */
+    line-height: 1.5; /* Optional, to improve spacing between lines */
+  }
+  
+  .animated-name {
+    font-weight: bold;
+    display: inline; /* Let the name behave like inline text, allowing it to flow with other text */
+    gap: 0.1rem;
+    animation: nameAnimation 5s infinite; /* Repeating animation for the name */
+  }
+  
+  .animated-name span {
+    opacity: 0;
+    animation: fadeInOut 5s infinite forwards; /* Animation for each letter */
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+      color: #ff0000;
+    }
+    25% {
+      opacity: 1;
+      transform: translateY(0);
+      color: #00ff00;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+      color: #0000ff;
+    }
+    75% {
+      opacity: 0;
+      transform: translateY(20px);
+      color: #ff0000;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+      color: #ff0000;
+    }
+  }
+  
+  @keyframes nameAnimation {
+    0% {
+      opacity: 1;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .animated-name {
+      font-size: 1.5rem;
+    }
+  }
+  

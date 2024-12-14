@@ -1,0 +1,9 @@
+<div class="home">
+    <h1 class="animated-name">
+      <span *ngFor="let letter of name.split(''); let i = index" 
+            [style.animationDelay]="i * 0.2 + 's'">
+        {{ letter }}
+      </span>
+    </h1>
+  </div>
+  
